@@ -1,8 +1,13 @@
 <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
         <div class="flex items-center space-x-2">
-            <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" class="h-6" />
-            <span class="text-sm font-medium">Posh Garments</span>
+        @if (!empty($logo))
+            <img src="{{ asset('storage/' . $logo) }}" alt="Logo" class="h-6" />
+        @else
+            <img src="{{ asset('assets/images/default-logo.png') }}" alt="" class="h-6" />
+        @endif
+
+            <span class="text-sm font-medium">G Garments</span>
         </div>
         <nav x-data="{ open: false }" class="relative">
             <div class="hidden md:flex space-x-6 text-sm">

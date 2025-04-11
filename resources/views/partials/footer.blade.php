@@ -17,10 +17,10 @@
         <div>
             <h4 class="font-semibold mb-2">Contact Info</h4>
             <ul class="space-y-1">
-                <li>info@poshgarments.com</li>
-                <li>+880 2 9871234</li>
+                <li>info@Ggarments.com</li>
+                <li>+880 2 95871234</li>
             </ul>
         </div>
     </div>
-    <div class="mt-4 text-center text-xs">© Posh Garments Ltd. All rights reserved.</div>
+    <div class="mt-4 text-center text-xs">© G Garments Ltd. All rights reserved.</div>
 </footer>

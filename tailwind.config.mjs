@@ -6,7 +6,14 @@ export default {
         './resources/**/*.vue',
     ],
     theme: {
-        extend: {},
+        fontFamily: {
+            sans: ['Rubik', 'sans-serif'], // override default sans
+        },
+        extend: {
+            fontFamily: {
+                rubik: ['Rubik', 'sans-serif'],
+            },
+        },
     },
     plugins: [],
 }
