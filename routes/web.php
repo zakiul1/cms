@@ -16,7 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $banner = \App\Models\Banner::latest()->first(); // or ->where('status', true)->first()
-    return view('pages.home', compact('banner'));
+    $products = \App\Models\Product::latest()->take(6)->get();
+    $customers = \App\Models\Customer::orderBy('name')->get(); // or latest()->get(); // or ->where('status', true)->first()
+    $platforms = \App\Models\Platform::orderBy('name')->get();
+    $features = \App\Models\Feature::all();
+
+    return view('pages.home', compact('banner', 'products', 'customers', 'platforms', 'features'));
 });
 Route::get('/profile', function () {
     return view('profile.index'); // create this view if needed
